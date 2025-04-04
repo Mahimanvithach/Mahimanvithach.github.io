@@ -1,152 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Career Advancement</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
     }
     header {
       background-color: #004080;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
     }
     main {
-      padding: 20px;
+      padding: 2rem;
     }
-    h2 {
+    h2.section-heading {
+      margin-bottom: 1rem;
       color: #004080;
     }
-    .grid {
+    .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      gap: 1rem;
     }
-    li {
-      background: white;
-      padding: 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
+    ul.study-list {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    li:hover {
-      background: #cce0ff;
+    ul.study-list li {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      height: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s;
     }
-    #divider {
-      height: 3px;
+    ul.study-list li img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    ul.study-list li:hover {
+      background-color: #e6f0ff;
+    }
+    .divider {
+      height: 2px;
       background-color: #004080;
-      margin: 30px 0;
+      margin: 2rem 0;
     }
-    #overview {
-      padding: 20px;
-      background: #fff;
-      border-radius: 5px;
+    .overview {
       display: none;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .overview a {
+      color: #004080;
+      display: block;
+      margin-top: 0.25rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Career Advancement Portal</h1>
-    <p>Select a popular field of study to explore more!</p>
+    <h1>Welcome to Career Advancement</h1>
+    <p>Explore the most popular studies in UG/PG and discover your path</p>
   </header>
-
   <main>
-    <h2>Top 10 Popular Studies</h2>
-    <ul id="studyList" class="grid"></ul>
-    <div id="divider"></div>
-    <div id="overview"></div>
+    <h2 class="section-heading">Top 10 Popular Studies</h2>
+    <ul class="study-list grid-container">
+      <li onclick="showOverview('ai')"><img src="https://img.icons8.com/ios-filled/50/artificial-intelligence.png" alt="AI">Artificial Intelligence</li>
+      <li onclick="showOverview('ds')"><img src="https://img.icons8.com/ios-filled/50/combo-chart--v1.png" alt="DS">Data Science</li>
+      <li onclick="showOverview('cyber')"><img src="https://img.icons8.com/ios-filled/50/lock-2.png" alt="Cybersecurity">Cybersecurity</li>
+      <li onclick="showOverview('cloud')"><img src="https://img.icons8.com/ios-filled/50/cloud.png" alt="Cloud">Cloud Computing</li>
+      <li onclick="showOverview('iot')"><img src="https://img.icons8.com/ios-filled/50/sensor.png" alt="IoT">Internet of Things (IoT)</li>
+      <li onclick="showOverview('robotics')"><img src="https://img.icons8.com/ios-filled/50/robot-2.png" alt="Robotics">Robotics</li>
+      <li onclick="showOverview('blockchain')"><img src="https://img.icons8.com/ios-filled/50/blockchain-technology.png" alt="Blockchain">Blockchain</li>
+      <li onclick="showOverview('bio')"><img src="https://img.icons8.com/ios-filled/50/dna-helix.png" alt="Biotech">Biotechnology</li>
+      <li onclick="showOverview('env')"><img src="https://img.icons8.com/ios-filled/50/deciduous-tree.png" alt="Env">Environmental Science</li>
+      <li onclick="showOverview('arvr')"><img src="https://img.icons8.com/ios-filled/50/virtual-reality.png" alt="AR/VR">AR/VR</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div id="overview" class="overview"></div>
   </main>
 
   <script>
-    const studies = [
-      {
-        name: "Computer Science",
-        overview: "Study of computation, programming, and software systems.",
-        description: "Computer Science involves the study of algorithms, data structures, software engineering, and artificial intelligence.",
-        opportunities: "Software Developer, Data Scientist, System Architect, AI Engineer"
+    const overviews = {
+      ai: {
+        title: "Artificial Intelligence",
+        description: "AI involves creating machines that can mimic human intelligence and perform tasks such as learning, reasoning, and problem-solving.",
+        courses: "Courses: Machine Learning, Deep Learning, NLP, Computer Vision.",
+        jobs: "Job Roles: AI Engineer, Machine Learning Engineer, Data Scientist, Research Scientist.",
+        links: [
+          { name: "Coursera", url: "https://www.coursera.org/specializations/artificial-intelligence" },
+          { name: "Udacity", url: "https://www.udacity.com/school-of-ai" }
+        ]
       },
-      {
-        name: "Data Science",
-        overview: "Field that uses scientific methods to extract insights from data.",
-        description: "Data Science focuses on statistics, machine learning, data analysis, and visualization.",
-        opportunities: "Data Analyst, Machine Learning Engineer, Data Engineer, Business Analyst"
+      ds: {
+        title: "Data Science",
+        description: "Data Science uses scientific methods, algorithms, and systems to extract insights from structured and unstructured data.",
+        courses: "Courses: Statistics, Python, SQL, Data Mining, Big Data Analytics.",
+        jobs: "Job Roles: Data Analyst, Data Scientist, Business Intelligence Developer, Statistician.",
+        links: [
+          { name: "edX", url: "https://www.edx.org/learn/data-science" },
+          { name: "Kaggle Learn", url: "https://www.kaggle.com/learn" }
+        ]
       },
-      {
-        name: "Artificial Intelligence",
-        overview: "Smart machines capable of performing tasks requiring human intelligence.",
-        description: "AI studies include neural networks, robotics, computer vision, and NLP.",
-        opportunities: "AI Researcher, Computer Vision Engineer, NLP Engineer, Robotics Programmer"
+      cyber: {
+        title: "Cybersecurity",
+        description: "Cybersecurity focuses on protecting systems, networks, and data from cyber threats.",
+        courses: "Courses: Network Security, Ethical Hacking, Cryptography, Risk Management.",
+        jobs: "Job Roles: Security Analyst, Ethical Hacker, Security Architect, SOC Analyst.",
+        links: [
+          { name: "Cybrary", url: "https://www.cybrary.it" },
+          { name: "SANS", url: "https://www.sans.org" }
+        ]
       },
-      {
-        name: "Cybersecurity",
-        overview: "Protecting systems and networks from digital attacks.",
-        description: "Cybersecurity involves threat detection, risk assessment, and network security protocols.",
-        opportunities: "Security Analyst, Penetration Tester, Cybersecurity Engineer, Forensic Analyst"
+      cloud: {
+        title: "Cloud Computing",
+        description: "Cloud Computing delivers computing services like servers, storage, and databases over the internet.",
+        courses: "Courses: AWS, Azure, DevOps, Cloud Architecture.",
+        jobs: "Job Roles: Cloud Engineer, DevOps Engineer, Solutions Architect, Cloud Consultant.",
+        links: [
+          { name: "AWS Training", url: "https://www.aws.training" },
+          { name: "Microsoft Learn", url: "https://learn.microsoft.com/en-us/training/" }
+        ]
       },
-      {
-        name: "Business Administration",
-        overview: "Operation, organization, and management of businesses.",
-        description: "Covers finance, marketing, human resources, and strategy management.",
-        opportunities: "Business Manager, Marketing Specialist, HR Manager, Financial Analyst"
+      iot: {
+        title: "Internet of Things (IoT)",
+        description: "IoT connects physical devices to the internet to collect and exchange data.",
+        courses: "Courses: Embedded Systems, Wireless Communication, Sensors, IoT Security.",
+        jobs: "Job Roles: IoT Developer, Embedded Systems Engineer, Network Analyst, Firmware Engineer.",
+        links: [
+          { name: "Coursera", url: "https://www.coursera.org/specializations/iot" },
+          { name: "edX", url: "https://www.edx.org/learn/internet-of-things" }
+        ]
       },
-      {
-        name: "Psychology",
-        overview: "Study of mind and behavior.",
-        description: "Includes behavioral analysis, mental health diagnosis, and therapy.",
-        opportunities: "Counselor, Clinical Psychologist, HR Specialist, Therapist"
+      robotics: {
+        title: "Robotics",
+        description: "Robotics combines engineering and science to design and build intelligent machines.",
+        courses: "Courses: Control Systems, Mechatronics, AI for Robotics, Automation.",
+        jobs: "Job Roles: Robotics Engineer, Mechatronics Engineer, Automation Specialist, Control Systems Engineer.",
+        links: [
+          { name: "Robotics Academy", url: "https://roboticsacademy.org" },
+          { name: "Coursera", url: "https://www.coursera.org/browse/engineering/robotics" }
+        ]
       },
-      {
-        name: "Biotechnology",
-        overview: "Application of biology to develop technologies and products.",
-        description: "Involves genetics, molecular biology, and biochemical engineering.",
-        opportunities: "Research Scientist, Biotech Engineer, Quality Analyst, Clinical Lab Technician"
+      blockchain: {
+        title: "Blockchain",
+        description: "Blockchain is a decentralized digital ledger for secure and transparent transactions.",
+        courses: "Courses: Smart Contracts, Cryptocurrency, Blockchain Architecture, Solidity.",
+        jobs: "Job Roles: Blockchain Developer, Crypto Analyst, Smart Contract Developer, Blockchain Architect.",
+        links: [
+          { name: "Blockgeeks", url: "https://blockgeeks.com" },
+          { name: "Coursera", url: "https://www.coursera.org/specializations/blockchain" }
+        ]
       },
-      {
-        name: "Mechanical Engineering",
-        overview: "Design and manufacturing of mechanical systems.",
-        description: "Focus on thermodynamics, fluid mechanics, and product design.",
-        opportunities: "Mechanical Engineer, CAD Designer, Manufacturing Engineer, Project Manager"
+      bio: {
+        title: "Biotechnology",
+        description: "Biotechnology merges biology and technology to develop useful products and services.",
+        courses: "Courses: Genetic Engineering, Molecular Biology, Bioprocessing, Bioinformatics.",
+        jobs: "Job Roles: Biotech Researcher, Clinical Technician, Genetic Engineer, Lab Analyst.",
+        links: [
+          { name: "FutureLearn", url: "https://www.futurelearn.com/subjects/science-engineering-and-maths-courses/biotechnology" },
+          { name: "Coursera", url: "https://www.coursera.org/specializations/biotechnology" }
+        ]
       },
-      {
-        name: "Digital Marketing",
-        overview: "Use of digital channels to market products and services.",
-        description: "Covers SEO, content marketing, social media, and analytics.",
-        opportunities: "SEO Specialist, Content Marketer, Digital Strategist, Marketing Analyst"
+      env: {
+        title: "Environmental Science",
+        description: "This field studies environmental systems and solutions to environmental issues.",
+        courses: "Courses: Ecology, Environmental Policy, Conservation Biology, Environmental Chemistry.",
+        jobs: "Job Roles: Environmental Scientist, Sustainability Consultant, Ecologist, Environmental Analyst.",
+        links: [
+          { name: "edX", url: "https://www.edx.org/learn/environmental-science" },
+          { name: "Coursera", url: "https://www.coursera.org/specializations/environmental-science" }
+        ]
       },
-      {
-        name: "Environmental Science",
-        overview: "Study of the environment and solutions to environmental problems.",
-        description: "Topics include ecology, climate change, and conservation.",
-        opportunities: "Environmental Consultant, Sustainability Specialist, Ecologist, Researcher"
+      arvr: {
+        title: "AR/VR",
+        description: "AR/VR enhances or simulates real-world environments using technology for immersive experiences.",
+        courses: "Courses: Unity, 3D Modeling, UX/UI for VR, Interactive Media.",
+        jobs: "Job Roles: AR Developer, VR Designer, 3D Artist, Interaction Designer.",
+        links: [
+          { name: "Unity Learn", url: "https://learn.unity.com" },
+          { name: "Coursera", url: "https://www.coursera.org/courses?query=ar%20vr" }
+        ]
       }
-    ];
+    };
 
-    const studyList = document.getElementById('studyList');
-    const overviewBox = document.getElementById('overview');
-
-    studies.forEach((study, index) => {
-      const li = document.createElement('li');
-      li.textContent = `${index + 1}. ${study.name}`;
-      li.onclick = () => {
-        overviewBox.innerHTML = `
-          <h3>${study.name}</h3>
-          <p><strong>Overview:</strong> ${study.overview}</p>
-          <p><strong>Description:</strong> ${study.description}</p>
-          <p><strong>Job Opportunities:</strong> ${study.opportunities}</p>
-        `;
-        overviewBox.style.display = 'block';
-      };
-      studyList.appendChild(li);
-    });
+    function showOverview(key) {
+      const data = overviews[key];
+      const overviewDiv = document.getElementById("overview");
+      overviewDiv.innerHTML = `
+        <h2>${data.title}</h2>
+        <p><strong>Description:</strong> ${data.description}</p>
+        <p><strong>Courses:</strong> ${data.courses}</p>
+        <p><strong>Job Opportunities:</strong> ${data.jobs}</p>
+        <strong>Popular Learning Sites:</strong>
+        ${data.links.map(link => `<a href="${link.url}" target="_blank">${link.name}</a>`).join("")}
+      `;
+      overviewDiv.style.display = "block";
+    }
   </script>
 </body>
 </html>
