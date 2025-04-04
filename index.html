@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Advancement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    h2 {
+      color: #004080;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    li {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      list-style: none;
+    }
+    li:hover {
+      background: #cce0ff;
+    }
+    #divider {
+      height: 3px;
+      background-color: #004080;
+      margin: 30px 0;
+    }
+    #overview {
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Career Advancement Portal</h1>
+    <p>Select a popular field of study to explore more!</p>
+  </header>
+
+  <main>
+    <h2>Top 10 Popular Studies</h2>
+    <ul id="studyList" class="grid"></ul>
+    <div id="divider"></div>
+    <div id="overview"></div>
+  </main>
+
+  <script>
+    const studies = [
+      {
+        name: "Computer Science",
+        overview: "Study of computation, programming, and software systems.",
+        description: "Computer Science involves the study of algorithms, data structures, software engineering, and artificial intelligence.",
+        opportunities: "Software Developer, Data Scientist, System Architect, AI Engineer"
+      },
+      {
+        name: "Data Science",
+        overview: "Field that uses scientific methods to extract insights from data.",
+        description: "Data Science focuses on statistics, machine learning, data analysis, and visualization.",
+        opportunities: "Data Analyst, Machine Learning Engineer, Data Engineer, Business Analyst"
+      },
+      {
+        name: "Artificial Intelligence",
+        overview: "Smart machines capable of performing tasks requiring human intelligence.",
+        description: "AI studies include neural networks, robotics, computer vision, and NLP.",
+        opportunities: "AI Researcher, Computer Vision Engineer, NLP Engineer, Robotics Programmer"
+      },
+      {
+        name: "Cybersecurity",
+        overview: "Protecting systems and networks from digital attacks.",
+        description: "Cybersecurity involves threat detection, risk assessment, and network security protocols.",
+        opportunities: "Security Analyst, Penetration Tester, Cybersecurity Engineer, Forensic Analyst"
+      },
+      {
+        name: "Business Administration",
+        overview: "Operation, organization, and management of businesses.",
+        description: "Covers finance, marketing, human resources, and strategy management.",
+        opportunities: "Business Manager, Marketing Specialist, HR Manager, Financial Analyst"
+      },
+      {
+        name: "Psychology",
+        overview: "Study of mind and behavior.",
+        description: "Includes behavioral analysis, mental health diagnosis, and therapy.",
+        opportunities: "Counselor, Clinical Psychologist, HR Specialist, Therapist"
+      },
+      {
+        name: "Biotechnology",
+        overview: "Application of biology to develop technologies and products.",
+        description: "Involves genetics, molecular biology, and biochemical engineering.",
+        opportunities: "Research Scientist, Biotech Engineer, Quality Analyst, Clinical Lab Technician"
+      },
+      {
+        name: "Mechanical Engineering",
+        overview: "Design and manufacturing of mechanical systems.",
+        description: "Focus on thermodynamics, fluid mechanics, and product design.",
+        opportunities: "Mechanical Engineer, CAD Designer, Manufacturing Engineer, Project Manager"
+      },
+      {
+        name: "Digital Marketing",
+        overview: "Use of digital channels to market products and services.",
+        description: "Covers SEO, content marketing, social media, and analytics.",
+        opportunities: "SEO Specialist, Content Marketer, Digital Strategist, Marketing Analyst"
+      },
+      {
+        name: "Environmental Science",
+        overview: "Study of the environment and solutions to environmental problems.",
+        description: "Topics include ecology, climate change, and conservation.",
+        opportunities: "Environmental Consultant, Sustainability Specialist, Ecologist, Researcher"
+      }
+    ];
+
+    const studyList = document.getElementById('studyList');
+    const overviewBox = document.getElementById('overview');
+
+    studies.forEach((study, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${index + 1}. ${study.name}`;
+      li.onclick = () => {
+        overviewBox.innerHTML = `
+          <h3>${study.name}</h3>
+          <p><strong>Overview:</strong> ${study.overview}</p>
+          <p><strong>Description:</strong> ${study.description}</p>
+          <p><strong>Job Opportunities:</strong> ${study.opportunities}</p>
+        `;
+        overviewBox.style.display = 'block';
+      };
+      studyList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
