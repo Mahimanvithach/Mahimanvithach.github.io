@@ -1,220 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Advancement</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-    }
-    header {
-      background-color: #004080;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #333;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-    }
-    nav a:hover {
-      background-color: #575757;
-      border-radius: 5px;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px #000;
-    }
-    .studies-section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .studies-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .study-button {
-      background-color: #FFFDD0;
-      border: 1px solid #ccc;
-      padding: 15px;
-      width: 200px;
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-radius: 8px;
-    }
-    .study-button img {
-      width: 30px;
-      height: 30px;
-    }
-    .description-section {
-      padding: 20px;
-      border-top: 3px solid #004080;
-      display: none;
-    }
-    .video-section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    iframe {
-      max-width: 100%;
-      height: 400px;
-      border: none;
-    }
-    footer {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advancement - Top Study Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            color: #007bff;
+            outline: none;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #333;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+        }
+
+        .study-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .study-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover, .button:focus {
+            background-color: #0056b3;
+            outline: none;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: #333;
+            margin-right: 15px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Career Advancement</h1>
-  </header>
+    <header class="header">
+        <nav>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#studies">Studies</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><img src="linkedin-logo.png" alt="LinkedIn Logo"></a>
+                <a href="#" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook Logo"></a>
+                <a href="#" aria-label="Twitter"><img src="twitter-logo.png" alt="Twitter Logo"></a>
+            </div>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#studies">Popular Studies</a>
-    <a href="#video">Watch Video</a>
-    <a href="#about">About</a>
-  </nav>
+    <main class="main-content">
+        <section class="section-title">
+            <h1>Top Study Options for Career Advancement</h1>
+        </section>
 
-  <div class="hero">
-    Plan Your Future with Confidence
-  </div>
+        <div class="study-card">
+            <img src="study-image1.jpg" alt="Study on Software Engineering">
+            <h2>Software Engineering</h2>
+            <p>Learn to design, develop, and implement complex software solutions.</p>
+            <a href="#" class="button" role="button">Learn More</a>
+        </div>
 
-  <section id="studies" class="studies-section">
-    <h2>Top 15 Popular Studies</h2>
-    <div class="studies-grid">
-      <button class="study-button" onclick="showDetails('AI')"><img src="https://cdn-icons-png.flaticon.com/512/4712/4712102.png"/>Artificial Intelligence</button>
-      <button class="study-button" onclick="showDetails('Data Science')"><img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png"/>Data Science</button>
-      <button class="study-button" onclick="showDetails('Cybersecurity')"><img src="https://cdn-icons-png.flaticon.com/512/2942/2942756.png"/>Cybersecurity</button>
-      <button class="study-button" onclick="showDetails('ARVR')"><img src="https://cdn-icons-png.flaticon.com/512/3522/3522246.png"/>AR/VR</button>
-      <button class="study-button" onclick="showDetails('Cloud Computing')"><img src="https://cdn-icons-png.flaticon.com/512/4149/4149645.png"/>Cloud Computing</button>
-      <button class="study-button" onclick="showDetails('Blockchain')"><img src="https://cdn-icons-png.flaticon.com/512/6894/6894623.png"/>Blockchain</button>
-      <button class="study-button" onclick="showDetails('Digital Marketing')"><img src="https://cdn-icons-png.flaticon.com/512/10017/10017467.png"/>Digital Marketing</button>
-      <button class="study-button" onclick="showDetails('Robotics')"><img src="https://cdn-icons-png.flaticon.com/512/3009/3009878.png"/>Robotics</button>
-      <button class="study-button" onclick="showDetails('UI/UX')"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"/>UI/UX Design</button>
-      <button class="study-button" onclick="showDetails('Environmental Science')"><img src="https://cdn-icons-png.flaticon.com/512/648/648198.png"/>Environmental Science</button>
-      <button class="study-button" onclick="showDetails('Healthcare Informatics')"><img src="https://cdn-icons-png.flaticon.com/512/4201/4201973.png"/>Healthcare Informatics</button>
-      <button class="study-button" onclick="showDetails('Animation')"><img src="https://cdn-icons-png.flaticon.com/512/3189/3189966.png"/>Animation</button>
-      <button class="study-button" onclick="showDetails('Finance')"><img src="https://cdn-icons-png.flaticon.com/512/3311/3311576.png"/>Finance</button>
-      <button class="study-button" onclick="showDetails('Game Design')"><img src="https://cdn-icons-png.flaticon.com/512/4052/4052984.png"/>Game Design</button>
-      <button class="study-button" onclick="showDetails('Psychology')"><img src="https://cdn-icons-png.flaticon.com/512/4088/4088875.png"/>Psychology</button>
-    </div>
-  </section>
+        <div class="study-card">
+            <img src="study-image2.jpg" alt="Study on Data Science">
+            <h2>Data Science</h2>
+            <p>Explore data analysis and its application in business.</p>
+            <a href="#" class="button" role="button">Learn More</a>
+        </div>
 
-  <section class="description-section" id="desc">
-    <h3 id="study-title"></h3>
-    <p id="study-desc"></p>
-  </section>
+        <div class="study-card">
+            <img src="study-image3.jpg" alt="Study on Cyber Security">
+            <h2>Cyber Security</h2>
+            <p>Protect your organization from cyber threats and attacks.</p>
+            <a href="#" class="button" role="button">Learn More</a>
+        </div>
+    </main>
 
-  <section id="video" class="video-section">
-    <h2>Watch this Career Guide</h2>
-    <iframe src="https://www.youtube.com/embed/8CL2hetqpfg" allowfullscreen></iframe>
-  </section>
-
-  <footer>
-    Contact: careeradvancement@2025
-  </footer>
-
-  <script>
-    const studyDetails = {
-      'AI': {
-        title: 'Artificial Intelligence',
-        desc: 'AI involves machines that can simulate human intelligence. Jobs: ML Engineer, AI Researcher. Courses: Neural Networks, Deep Learning. Top Universities: MIT, Stanford, CMU. Online: Coursera, edX.'
-      },
-      'Data Science': {
-        title: 'Data Science',
-        desc: 'Focuses on data analysis and prediction. Jobs: Data Scientist, Analyst. Courses: Python, Statistics. Universities: Harvard, UC Berkeley. Online: Udemy, DataCamp.'
-      },
-      'Cybersecurity': {
-        title: 'Cybersecurity',
-        desc: 'Protecting networks and systems. Jobs: Security Analyst. Courses: Ethical Hacking. Universities: NYU, Georgia Tech. Online: Cybrary, Coursera.'
-      },
-      'ARVR': {
-        title: 'Augmented/Virtual Reality',
-        desc: 'Building immersive digital experiences. Jobs: XR Developer. Courses: Unity, 3D Modeling. Universities: Stanford, SCAD. Online: Udacity, Coursera.'
-      },
-      'Cloud Computing': {
-        title: 'Cloud Computing',
-        desc: 'Managing online computing systems. Jobs: Cloud Engineer. Courses: AWS, Azure. Universities: U of Washington, CMU. Online: Pluralsight, AWS Academy.'
-      },
-      'Blockchain': {
-        title: 'Blockchain',
-        desc: 'Decentralized ledgers for security. Jobs: Blockchain Dev. Courses: Solidity, Smart Contracts. Universities: MIT, Duke. Online: Coursera, Blockchain Council.'
-      },
-      'Digital Marketing': {
-        title: 'Digital Marketing',
-        desc: 'Promoting through digital media. Jobs: SEO Analyst, Content Marketer. Courses: SEM, Analytics. Online: Google Skillshop, Hubspot.'
-      },
-      'Robotics': {
-        title: 'Robotics',
-        desc: 'Engineering autonomous machines. Jobs: Robot Programmer. Courses: ROS, Mechatronics. Universities: CMU, Georgia Tech.'
-      },
-      'UI/UX': {
-        title: 'UI/UX Design',
-        desc: 'Creating great user interfaces. Jobs: UX Designer. Courses: Figma, HCI. Online: Coursera, Interaction Design Foundation.'
-      },
-      'Environmental Science': {
-        title: 'Environmental Science',
-        desc: 'Study of the environment. Jobs: Ecologist, Environmental Engineer. Universities: Yale, Stanford.'
-      },
-      'Healthcare Informatics': {
-        title: 'Healthcare Informatics',
-        desc: 'Data management in healthcare. Jobs: Health IT Specialist. Courses: Health Data Systems. Online: Coursera, FutureLearn.'
-      },
-      'Animation': {
-        title: 'Animation',
-        desc: 'Creating motion visuals. Jobs: Animator, VFX Artist. Courses: Adobe After Effects, Maya.'
-      },
-      'Finance': {
-        title: 'Finance',
-        desc: 'Managing money and assets. Jobs: Financial Analyst. Courses: Investment Strategies, CFA Prep.'
-      },
-      'Game Design': {
-        title: 'Game Design',
-        desc: 'Designing interactive games. Jobs: Game Designer, Developer. Courses: Unity, Game Theory.'
-      },
-      'Psychology': {
-        title: 'Psychology',
-        desc: 'Study of mind and behavior. Jobs: Counselor, Therapist. Courses: Cognitive Psych, Behavioral Studies.'
-      }
-    };
-
-    function showDetails(study) {
-      const descSection = document.getElementById('desc');
-      descSection.style.display = 'block';
-      document.getElementById('study-title').innerText = studyDetails[study].title;
-      document.getElementById('study-desc').innerText = studyDetails[study].desc;
-    }
-  </script>
+    <footer class="footer">
+        <p>&copy; 2023 Career Advancement. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><img src="linkedin-logo.png" alt="LinkedIn Logo"></a>
+            <a href="#" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook Logo"></a>
+            <a href="#" aria-label="Twitter"><img src="twitter-logo.png" alt="Twitter Logo"></a>
+        </div>
+    </footer>
 </body>
 </html>
